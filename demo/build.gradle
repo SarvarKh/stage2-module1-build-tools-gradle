@@ -1,4 +1,21 @@
 //add everything here
+plugins {
+    // Apply the java Plugin to add support for Java.
+    id 'java'
+    id 'application'
+}
+
+dependencies {
+
+    //point to the local subproject
+    implementation project(':utils')
+
+}
+
+repositories {
+// provide repository, where required dependencies are located
+    mavenCentral()
+}
 
 test {
     useJUnitPlatform()
